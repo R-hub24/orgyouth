@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ئیلیڤتی گەنجان - Elevate Youth</title>
+    <!-- هێنانی فۆنتی Noto Kufi Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Kufi Arabic', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #1e1e1e;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #2e2e2e;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #2ecc71; /* ڕەنگی سەوز */
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .header h1 span.english {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #333333;
+            border-radius: 6px;
+            background-color: #2a2a2a;
+            color: #ffffff;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: #2ecc71;
+        }
+
+        .btn-link {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #2ecc71;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 12px;
+        }
+
+        .btn-link:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>
+                <span>ئیلیڤلەتی گەنجان</span>
+                <span class="english">(elevate Youth)</span>
+            </h1>
+        </div>
+
+        <form id="registrationForm">
+            <!-- ناوی سیانی -->
+            <div class="form-group">
+                <label for="fullName">ناوی سیانی:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="ناوی تەواوت بنووسە" required>
+            </div>
+
+            <!-- ژمارەی تەلەفۆن -->
+            <div class="form-group">
+                <label for="phone">ژمارەی تەلەفۆن:</label>
+                <input type="tel" id="phone" name="phone" placeholder="07XXXXXXXXX" dir="ltr" style="text-align: right;" required>
+            </div>
+
+            <!-- ئیمەیل -->
+            <div class="form-group">
+                <label for="email">ئیمەیل:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" dir="ltr" style="text-align: right;" required>
+            </div>
+
+            <!-- شار -->
+            <div class="form-group">
+                <label for="city">شار:</label>
+                <input type="text" id="city" name="city" placeholder="ناوی شارەکەت بنووسە" required>
+            </div>
+
+            <!-- گەرەک -->
+            <div class="form-group">
+                <label for="neighborhood">ناوی گەرەک:</label>
+                <input type="text" id="neighborhood" name="neighborhood" placeholder="ناوی گەرەکەت بنووسە" required>
+            </div>
+
+            <!-- ناوەندی خوێندن -->
+            <div class="form-group">
+                <label for="institution">ناوەندی خوێندن:</label>
+                <input type="text" id="institution" name="institution" placeholder="ناوی زانکۆ یان پەیمانگە / خوێندنگە" required>
+            </div>
+
+            <!-- بڕوانامە -->
+            <div class="form-group">
+                <label for="degree">بڕوانامە:</label>
+                <select id="degree" name="degree" required>
+                    <option value="" disabled selected>بڕوانامە هەڵبژێرە</option>
+                    <option value="دبلۆم">دبلۆم</option>
+                    <option value="بەکالۆریۆس">بەکالۆریۆس</option>
+                    <option value="ماستەر">ماستەر</option>
+                    <option value="دکتۆرا">دکتۆرا</option>
+                    <option value="ئامادەیی / خوارتر">ئامادەیی / خوارتر</option>
+                </select>
+            </div>
+
+            <!-- دوگمەی ناردن و سەیڤ کردن -->
+            <button type="submit" id="submitBtn" class="btn-link">ناردن و تۆمارکردن</button>
+        </form>
+    </div>
+
+    <script>
+        // لینکی نوێی گووگڵ ئاپس سکریپتەکەت
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzKRxwMhUlHYvFXQzwM4vYqQTdArZv_EZOytCTE9VuSd_aIslbWdr_bOPGxO5Ph1zFmpA/exec';
+        
+        const form = document.getElementById('registrationForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault(); 
+            
+            const formData = {
+                fullName: document.getElementById('fullName').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                city: document.getElementById('city').value.trim(),
+                neighborhood: document.getElementById('neighborhood').value.trim(),
+                institution: document.getElementById('institution').value.trim(),
+                degree: document.getElementById('degree').value,
+                timestamp: new Date().toLocaleString()
+            };
+
+            if(!formData.fullName || !formData.phone || !formData.email || !formData.city || !formData.neighborhood || !formData.institution || !formData.degree) {
+                alert('تکایە هەموو خانەکان پڕبکەرەوە!');
+                return;
+            }
+
+            submitBtn.style.pointerEvents = 'none';
+            submitBtn.textContent = 'تکایە چاوەڕوان بە... داتاکان دەچنە شیت...';
+
+            try {
+                await fetch(scriptURL, { 
+                    method: 'POST', 
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+            } catch (error) {
+                console.error("Error:", error);
+            }
+
+            alert('زانیارییەکان بە سەرکەوتوویی نێردران بۆ گووگڵ شیت!');
+            form.reset();
+            submitBtn.style.pointerEvents = 'auto';
+            submitBtn.textContent = 'ناردن و تۆمارکردن';
+        });
+    </script>
+
+</body>
+</html>
